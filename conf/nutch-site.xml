@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+    <property>
+        <name>http.agent.name</name>                                                  
+        <value>Bd17kaka</value>                                                               
+        <description>
+            Bd17kaka
+        </description>                                                                
+    </property>                                                                     
+
+    <property>                                                                      
+        <name>http.robots.agents</name>                                               
+        <value>
+            Bd17kaka
+        </value>                                                              
+        <description>
+        </description>                                                                
+    </property>       
+
+    <property>
+        <name>http.agent.description</name>
+        <value></value>
+        <description>
+        </description>
+    </property>
+
+    <property>
+        <name>http.agent.url</name>
+        <value></value>
+        <description>
+        </description>
+    </property>
+
+    <property>
+        <name>http.agent.email</name>
+        <value></value>
+        <description>
+            bd17kaka@gmail.com
+        </description>
+    </property>
+
+	<!-- plugin properties -->
+
+	<property>
+		<name>plugin.folders</name>
+		<value>plugins</value>
+		<description>Directories where nutch plugins are located. Each
+			element may be a relative or absolute path. If absolute, it is used
+			as is. If relative, it is searched for on the classpath.
+		</description>
+	</property>
+
+	<property>
+		<name>plugin.auto-activation</name>
+		<value>true</value>
+		<description>Defines if some plugins that are not activated regarding
+			the plugin.includes and plugin.excludes properties must be
+			automaticaly
+			activated if they are needed by some actived plugins.
+		</description>
+	</property>
+
+	<property>
+		<name>plugin.includes</name>
+		<value>protocol-http|urlfilter-regex|parse-(html|tika|image)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)
+		</value>
+		<description>Regular expression naming plugin directory names to
+			include. Any plugin not matching this expression is excluded.
+			In any case you need at least include the nutch-extensionpoints plugin.
+			By
+			default Nutch includes crawling just HTML and plain text via HTTP,
+			and basic indexing and search plugins. In order to use HTTPS please
+			enable
+			protocol-httpclient, but be aware of possible intermittent problems with the
+			underlying commons-httpclient library.
+		</description>
+	</property>
+
+	<property>
+		<name>plugin.excludes</name>
+		<value></value>
+		<description>Regular expression naming plugin directory names to
+			exclude.
+		</description>
+	</property>
+
+    <!--
+    <property>
+        <name>plugin.includes</name>
+        <value>
+            parse-email-address
+        </value>
+        <description>
+            Regular expression naming plugin directory names to
+            include.    Any plugin not matching this expression is excluded.
+            In any case you need at least include the nutch-extensionpoints plugin. By
+            default Nutch includes crawling just HTML and plain text via HTTP,
+            and basic indexing and search plugins.
+        </description>
+    </property>
+    -->
+</configuration>
